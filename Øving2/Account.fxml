@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="173.0" prefWidth="379.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="encapsulation.AccountController">
+   <children>
+      <GridPane layoutX="-2.0" prefHeight="195.0" prefWidth="379.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="118.0" minHeight="10.0" prefHeight="76.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="97.0" minHeight="10.0" prefHeight="63.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="balance" prefHeight="42.0" prefWidth="163.0" text="Penger på konto">
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="42.0" prefWidth="83.0" text="Sett rente" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="25.0" left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label prefHeight="42.0" prefWidth="103.0" text="Legg til rente" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#handleDeposit" prefHeight="22.0" prefWidth="84.0" text="Deposit" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="110.0" />
+               </GridPane.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#handleWithdraw" prefHeight="27.0" prefWidth="82.0" text="Withdraw" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="110.0" />
+               </GridPane.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#setRate" prefHeight="27.0" prefWidth="92.0" text="OK" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="25.0" left="100.0" />
+               </GridPane.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#handleInterest" prefHeight="27.0" prefWidth="92.0" text="OK" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="100.0" />
+               </GridPane.margin>
+            </Button>
+            <TextField fx:id="deposit" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="20.0" right="90.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="withdraw" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="20.0" right="90.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="rentefot" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="30.0" right="30.0" top="40.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </TextField>
+            <Label fx:id="interestRate" prefHeight="40.0" prefWidth="142.0" text="Rente : " GridPane.columnIndex="1">
+               <padding>
+                  <Insets left="25.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
